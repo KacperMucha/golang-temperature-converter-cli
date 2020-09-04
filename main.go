@@ -21,6 +21,11 @@ func main() {
 	if len(os.Args) != 2 {
 		printError(errInvalidArguments)
 	}
+	if originUnit == "C" {
+		convertToFahrenheit(originValue)
+	} else {
+		convertToCelsius(originValue)
+	}
 
 	originUnit := strings.ToUpper(os.Args[1])
 
